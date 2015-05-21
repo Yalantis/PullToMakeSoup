@@ -25,6 +25,8 @@
 		4DDC8C3A1B0E1C10000CAEF7 /* UIScrollView+PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC8C2D1B0E1C10000CAEF7 /* UIScrollView+PullToRefresh.swift */; };
 		4DDC8C3C1B0E1C23000CAEF7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DDC8C3B1B0E1C23000CAEF7 /* CoreGraphics.framework */; };
 		4DDC8C431B0E1E5A000CAEF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DDC8C421B0E1E5A000CAEF7 /* Main.storyboard */; };
+		4DDC8C761B0E3C95000CAEF7 /* badge_grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DDC8C741B0E3C95000CAEF7 /* badge_grey.png */; };
+		4DDC8C771B0E3C95000CAEF7 /* recipe-finder.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4DDC8C751B0E3C95000CAEF7 /* recipe-finder.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		4DDC8C3B1B0E1C23000CAEF7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4DDC8C421B0E1E5A000CAEF7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4DDC8C441B0E1FDA000CAEF7 /* PullToMakeSoup-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PullToMakeSoup-Bridging-Header.h"; sourceTree = "<group>"; };
+		4DDC8C741B0E3C95000CAEF7 /* badge_grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge_grey.png; sourceTree = "<group>"; };
+		4DDC8C751B0E3C95000CAEF7 /* recipe-finder.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "recipe-finder.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 			children = (
 				4DDC8C1B1B0E1C10000CAEF7 /* PullToRefresh */,
 				4DDC8C141B0E1C09000CAEF7 /* Demo */,
+				4DDC8C731B0E3C95000CAEF7 /* Recources */,
 				4DDC8BF21B0E1B75000CAEF7 /* Supporting Files */,
 			);
 			path = PullToMakeSoup;
@@ -164,6 +169,15 @@
 			path = PullToRefresh;
 			sourceTree = "<group>";
 		};
+		4DDC8C731B0E3C95000CAEF7 /* Recources */ = {
+			isa = PBXGroup;
+			children = (
+				4DDC8C741B0E3C95000CAEF7 /* badge_grey.png */,
+				4DDC8C751B0E3C95000CAEF7 /* recipe-finder.gif */,
+			);
+			path = Recources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,6 +241,8 @@
 				4DDC8C331B0E1C10000CAEF7 /* CookingRefresher.xcassets in Resources */,
 				4DDC8C341B0E1C10000CAEF7 /* cover-path-only.svg in Resources */,
 				4DDC8C321B0E1C10000CAEF7 /* carrot-path-only.svg in Resources */,
+				4DDC8C761B0E3C95000CAEF7 /* badge_grey.png in Resources */,
+				4DDC8C771B0E3C95000CAEF7 /* recipe-finder.gif in Resources */,
 				4DDC8C431B0E1E5A000CAEF7 /* Main.storyboard in Resources */,
 				4DDC8C191B0E1C09000CAEF7 /* Images.xcassets in Resources */,
 				4DDC8C381B0E1C10000CAEF7 /* SoupView.xib in Resources */,
