@@ -3,7 +3,7 @@
 
 Custom animated pull-to-refresh that can be easily added to UIScrollView
 
-Made in [![Yalantis](https://raw.githubusercontent.com/Yalantis/PullToMakeSoup/master/PullToMakeSoup/Recources/badge_grey.png)](http://yalantis.com/?utm_source=github)
+[![Yalantis](https://raw.githubusercontent.com/Yalantis/PullToMakeSoup/master/PullToMakeSoup/Recources/badge_dark.png)](http://yalantis.com/?utm_source=github)
 
 Check this [article on our blog](http://yalantis.com/blog/how-we-built-customizable-pull-to-refresh-pull-to-cook-soup-animation/?utm_source=github) to know more details about animations implementation
 
