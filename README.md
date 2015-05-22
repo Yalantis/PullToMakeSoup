@@ -41,6 +41,8 @@ You can also start refreshing programmatically:
 tableView.startRefreshing()
 ```
 
+Component was implemented based on [customizable pull-to-refresh](https://github.com/Yalantis/PullToRefresh)
+
 ## License
 
 	The MIT License (MIT)
