@@ -4,6 +4,8 @@
 
 Custom animated pull-to-refresh that can be easily added to UIScrollView
 
+Check [this project on dribble](https://dribbble.com/shots/2074667-Recipe-Finder-v-2)
+
 <img src="https://raw.githubusercontent.com/Yalantis/PullToMakeSoup/master/PullToMakeSoup/Recources/recipe-finder.gif" />
 
 ##Usage
