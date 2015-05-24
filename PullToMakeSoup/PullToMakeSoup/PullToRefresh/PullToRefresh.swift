@@ -1,6 +1,6 @@
 //
 //  PullToRefresh.swift
-//  PullToMakeSoup
+//  CookingPullToRefresh
 //
 //  Created by Anastasiya Gorban on 4/14/15.
 //  Copyright (c) 2015 Yalantis. All rights reserved.
@@ -9,13 +9,13 @@
 import UIKit
 import Foundation
 
-protocol RefreshViewAnimator {
+public protocol RefreshViewAnimator {
      func animateState(state: State)
 }
 
 // MARK: PullToRefresh
 
-class PullToRefresh: NSObject {
+public class PullToRefresh: NSObject {
     let refreshView: UIView
     var action: (() -> ())?
     
@@ -65,12 +65,12 @@ class PullToRefresh: NSObject {
     
     // MARK: - Initialization
     
-    required init(refreshView: UIView, animator: RefreshViewAnimator) {
+    public init(refreshView: UIView, animator: RefreshViewAnimator) {
         self.refreshView = refreshView
         self.animator = animator
     }
     
-    convenience override init() {
+    public override convenience init() {
         let refreshView = DefaultRefreshView()
         self.init(refreshView: refreshView, animator: DefaultViewAnimator(refreshView: refreshView))
     }
@@ -85,7 +85,7 @@ class PullToRefresh: NSObject {
     private let contentOffsetKeyPath = "contentOffset"
     private var previousScrollViewOffset: CGPoint = CGPointZero
     
-    override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<()>) {
+    override public func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<()>) {
         if (context == &KVOContext && keyPath == contentOffsetKeyPath && object as? UIScrollView == scrollView) {
             let offset = previousScrollViewOffset.y + scrollViewDefaultInsets.top
             let refreshViewHeight = refreshView.frame.size.height
@@ -134,12 +134,12 @@ class PullToRefresh: NSObject {
 
 // MARK: - State enumeration
 
-enum State:Equatable {
+public enum State:Equatable {
     case Inital, Loading, Finished
     case Releasing(progress: CGFloat)
 }
 
-func ==(a: State, b: State) -> Bool {
+public func ==(a: State, b: State) -> Bool {
     switch (a, b) {
     case (.Inital, .Inital): return true
     case (.Loading, .Loading): return true
@@ -196,15 +196,13 @@ class DefaultViewAnimator: RefreshViewAnimator {
     
     func animateState(state: State) {
         switch state {
-        case .Inital:
-            refreshView.activicyIndicator?.stopAnimating()
+        case .Inital: refreshView.activicyIndicator?.stopAnimating()
         case .Releasing(let progress):
             var transform = CGAffineTransformIdentity
             transform = CGAffineTransformScale(transform, progress, progress);
             transform = CGAffineTransformRotate(transform, 3.14 * progress * 2);
             refreshView.activicyIndicator.transform = transform
-        case .Loading:
-            refreshView.activicyIndicator.startAnimating()
+        case .Loading: refreshView.activicyIndicator.startAnimating()
         default: break
         }
     }

@@ -1,12 +1,13 @@
 //
 //  ViewController.swift
-//  PullToMakeSoup
+//  PullToMakeSoupDemo
 //
-//  Created by Anastasiya Gorban on 5/19/15.
+//  Created by Anastasiya Gorban on 5/22/15.
 //  Copyright (c) 2015 Yalantis. All rights reserved.
 //
 
 import UIKit
+import PullToMakeSoup
 
 class ViewController: UITableViewController {
 
@@ -21,11 +22,10 @@ class ViewController: UITableViewController {
                 })
         })
     }
-    
+
     @IBAction
     private func refresh() {
         tableView.startRefreshing()
-    }
-
+    }    
 }
 

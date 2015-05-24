@@ -1,6 +1,6 @@
 //
 //  UIScrollView+PullToRefresh.swift
-//  PullToMakeSoup
+//  CookingPullToRefresh
 //
 //  Created by Anastasiya Gorban on 4/14/15.
 //  Copyright (c) 2015 Yalantis. All rights reserved.
@@ -12,7 +12,7 @@ import ObjectiveC
 
 private var associatedObjectHandle: UInt8 = 0
 
-extension UIScrollView {
+public extension UIScrollView {
     private(set) var pullToRefresh: PullToRefresh? {
         get {
             return objc_getAssociatedObject(self, &associatedObjectHandle) as? PullToRefresh
@@ -22,7 +22,7 @@ extension UIScrollView {
         }
     }
     
-    func addPullToRefresh(pullToRefresh: PullToRefresh, action:()->()) {
+    public func addPullToRefresh(pullToRefresh: PullToRefresh, action:()->()) {
         if self.pullToRefresh != nil {
             self.removePullToRefresh(self.pullToRefresh!)
         }

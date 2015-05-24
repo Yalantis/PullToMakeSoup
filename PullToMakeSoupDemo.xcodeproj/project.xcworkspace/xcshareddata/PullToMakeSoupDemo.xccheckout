@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>C0619190-C7FE-49AB-A326-944CBF7D7C5C</string>
+	<string>6B2C4DF5-33CE-4F20-9FA7-F16024FB05CC</string>
 	<key>IDESourceControlProjectName</key>
-	<string>PullToMakeSoup</string>
+	<string>PullToMakeSoupDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>B31C59D96E46FB1D4E6493241EF3C8A4A75F78A3</key>
-		<string>http://git.yalantis.com/ios/RecipeFinder.git</string>
+		<key>C4FC8003944830BE28AB71C18F41E3E55C377D87</key>
+		<string>https://github.com/Yalantis/PullToMakeSoup.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>PullToMakeSoup.xcodeproj</string>
+	<string>PullToMakeSoupDemo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>B31C59D96E46FB1D4E6493241EF3C8A4A75F78A3</key>
+		<key>C4FC8003944830BE28AB71C18F41E3E55C377D87</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>http://git.yalantis.com/ios/RecipeFinder.git</string>
+	<string>https://github.com/Yalantis/PullToMakeSoup.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>B31C59D96E46FB1D4E6493241EF3C8A4A75F78A3</string>
+	<string>C4FC8003944830BE28AB71C18F41E3E55C377D87</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>B31C59D96E46FB1D4E6493241EF3C8A4A75F78A3</string>
+			<string>C4FC8003944830BE28AB71C18F41E3E55C377D87</string>
 			<key>IDESourceControlWCCName</key>
-			<string>CookingPullToRefresh</string>
+			<string>PullToMakeSoup</string>
 		</dict>
 	</array>
 </dict>

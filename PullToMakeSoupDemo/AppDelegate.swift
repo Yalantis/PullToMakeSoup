@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  PullToMakeSoup
+//  PullToMakeSoupDemo
 //
-//  Created by Anastasiya Gorban on 5/19/15.
+//  Created by Anastasiya Gorban on 5/22/15.
 //  Copyright (c) 2015 Yalantis. All rights reserved.
 //
 

@@ -9,11 +9,11 @@
 
 import Foundation
 import UIKit
-import CoreGraphics
 
-class PullToMakeSoup: PullToRefresh {
-    convenience init() {
-        let refreshView =  NSBundle.mainBundle().loadNibNamed("SoupView", owner: nil, options: nil).first as! SoupView
+public class PullToMakeSoup: PullToRefresh {
+    public convenience init() {
+        
+        let refreshView =  NSBundle(identifier: "Yalantis.PullToMakeSoup")!.loadNibNamed("SoupView", owner: nil, options: nil).first as! SoupView
         let animator =  SoupAnimator(refreshView: refreshView)
         self.init(refreshView: refreshView, animator: animator)
     }
@@ -46,7 +46,7 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
     
     private let refreshView: SoupView
     private let refreshViewHeight: CGFloat
-    
+
     private var bubbleTimer: NSTimer?
     
     private let animationDuration = 0.3
@@ -304,11 +304,11 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
         var lightsImages = [UIImage]()
         for i in 1...11 {
             let imageName = NSString(format: "Flames%.4d", i)
-            let image = UIImage(named: imageName as String)
+            let image = UIImage(named: imageName as String, inBundle: NSBundle(identifier: "Yalantis.PullToMakeSoup"), compatibleWithTraitCollection: nil)
             lightsImages.append(image!)
         }
         refreshView.flame.animationImages = lightsImages
-        refreshView.flame.animationDuration = 0.7
+       refreshView.flame.animationDuration = 0.7
         refreshView.flame.startAnimating()
         
         let delayTime = dispatch_time(DISPATCH_TIME_NOW,
@@ -317,7 +317,7 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
             var lightsImages = [UIImage]()
             for i in 11...68 {
                 let imageName = NSString(format: "Flames%.4d", i)
-                let image = UIImage(named: imageName as String)
+                let image = UIImage(named: imageName as String, inBundle: NSBundle(identifier: "Yalantis.PullToMakeSoup"), compatibleWithTraitCollection: nil)
                 lightsImages.append(image!)
             }
             

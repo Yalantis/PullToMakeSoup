@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Yalantis. All rights reserved.
 //
 
-extension PocketSVG {
+public extension PocketSVG {
     class func pathFromSVGFileNamed(
         named: String,
         origin: CGPoint,
