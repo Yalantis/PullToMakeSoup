@@ -19,6 +19,7 @@ Inspired by [this project on dribble](https://dribbble.com/shots/2074667-Recipe-
 ##Installing with [CocoaPods](https://cocoapods.org)
 
 ```ruby
+use_frameworks!
 pod 'PullToMakeSoup', '~> 1.0'
 ```
 
