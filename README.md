@@ -11,8 +11,24 @@ Inspired by [this project on dribble](https://dribbble.com/shots/2074667-Recipe-
 
 <img src="https://raw.githubusercontent.com/Yalantis/PullToMakeSoup/master/PullToMakeSoupDemo/Resouces/recipe-finder.gif" />
 
+##Requirements
+- iOS 8.0+
+- Xcode 6.3
+- Swift 1.2
+
+##Installing with [CocoaPods](https://cocoapods.org)
+
+```ruby
+pod 'PullToMakeSoup', '~> 1.0'
+```
+
 ##Usage
 
+At first, import PullToMakeSoup framework:
+
+```swift
+import PullToMakeSoup
+```
 
 Create refresher:
 
