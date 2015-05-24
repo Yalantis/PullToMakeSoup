@@ -17,7 +17,8 @@ Pod::Spec.new do |s|
 
 
   s.source       = { :git => "https://github.com/Yalantis/PullToMakeSoup.git", :tag => "1.0" }
-  s.source_files = "PullToMakeSoup/*"
+  s.source_files = "PullToMakeSoup/**/*.{h,m,swift}"
+  s.resources    = 'PullToMakeSoup/**/*.{svg,png,xib}'
   s.module_name  = "PullToMakeSoup"
   s.requires_arc = true
   s.frameworks   = 'CoreGraphics', 'QuartzCore'
