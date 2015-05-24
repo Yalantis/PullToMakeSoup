@@ -13,7 +13,7 @@ import UIKit
 public class PullToMakeSoup: PullToRefresh {
     public convenience init() {
         
-        let refreshView =  NSBundle(identifier: "Yalantis.PullToMakeSoup")!.loadNibNamed("SoupView", owner: nil, options: nil).first as! SoupView
+        let refreshView =  NSBundle(forClass: self.dynamicType).loadNibNamed("SoupView", owner: nil, options: nil).first as! SoupView
         let animator =  SoupAnimator(refreshView: refreshView)
         self.init(refreshView: refreshView, animator: animator)
     }
@@ -304,7 +304,7 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
         var lightsImages = [UIImage]()
         for i in 1...11 {
             let imageName = NSString(format: "Flames%.4d", i)
-            let image = UIImage(named: imageName as String, inBundle: NSBundle(identifier: "Yalantis.PullToMakeSoup"), compatibleWithTraitCollection: nil)
+            let image = UIImage(named: imageName as String, inBundle: NSBundle(forClass: self.dynamicType), compatibleWithTraitCollection: nil)
             lightsImages.append(image!)
         }
         refreshView.flame.animationImages = lightsImages
@@ -317,7 +317,7 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
             var lightsImages = [UIImage]()
             for i in 11...68 {
                 let imageName = NSString(format: "Flames%.4d", i)
-                let image = UIImage(named: imageName as String, inBundle: NSBundle(identifier: "Yalantis.PullToMakeSoup"), compatibleWithTraitCollection: nil)
+                let image = UIImage(named: imageName as String, inBundle: NSBundle(forClass: self.dynamicType), compatibleWithTraitCollection: nil)
                 lightsImages.append(image!)
             }
             
