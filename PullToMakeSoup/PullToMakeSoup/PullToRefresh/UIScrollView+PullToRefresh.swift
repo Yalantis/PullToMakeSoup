@@ -18,7 +18,7 @@ public extension UIScrollView {
             return objc_getAssociatedObject(self, &associatedObjectHandle) as? PullToRefresh
         }
         set {
-            objc_setAssociatedObject(self, &associatedObjectHandle, newValue, objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
+            objc_setAssociatedObject(self, &associatedObjectHandle, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     

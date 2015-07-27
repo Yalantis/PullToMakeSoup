@@ -59,7 +59,7 @@ extension CAKeyframeAnimation {
 
 extension UIView {
     func addAnimation(animation: CAKeyframeAnimation) {
-        layer.addAnimation(animation, forKey: description + animation.keyPath)
+        layer.addAnimation(animation, forKey: description + animation.keyPath!)
         layer.speed = 0
     }
     
