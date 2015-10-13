@@ -17,9 +17,9 @@ class ViewController: UITableViewController {
         tableView.addPullToRefresh(PullToMakeSoup(), action: {
             let delayTime = dispatch_time(DISPATCH_TIME_NOW,
                 Int64(5 * Double(NSEC_PER_SEC)))
-            dispatch_after(delayTime, dispatch_get_main_queue(), {[unowned self] in
-                self.tableView.endRefresing()
-                })
+            dispatch_after(delayTime, dispatch_get_main_queue()) { [unowned self] in
+                self.tableView.endRefreshing()
+            }
         })
     }
 

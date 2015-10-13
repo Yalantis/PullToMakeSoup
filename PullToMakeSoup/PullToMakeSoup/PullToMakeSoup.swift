@@ -9,6 +9,7 @@
 
 import Foundation
 import UIKit
+import PullToRefresh
 
 public class PullToMakeSoup: PullToRefresh {
     public convenience init() {
