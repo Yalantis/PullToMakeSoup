@@ -3,9 +3,9 @@
 
 Custom animated pull-to-refresh that can be easily added to UIScrollView
 
-[![Yalantis](https://raw.githubusercontent.com/Yalantis/PullToMakeSoup/master/PullToMakeSoupDemo/Resouces/badge_dark.png)](http://yalantis.com/?utm_source=github)
+[![Yalantis](https://raw.githubusercontent.com/Yalantis/PullToMakeSoup/master/PullToMakeSoupDemo/Resouces/badge_dark.png)](https://yalantis.com/?utm_source=github)
 
-Check this [article on our blog](http://yalantis.com/blog/how-we-built-customizable-pull-to-refresh-pull-to-cook-soup-animation/?utm_source=github) to know more details about animations implementation
+Check this [article on our blog](https://yalantis.com/blog/how-we-built-customizable-pull-to-refresh-pull-to-cook-soup-animation/?utm_source=github) to know more details about animations implementation
 
 Inspired by [this project on dribble](https://dribbble.com/shots/2074667-Recipe-Finder-v-2)
 
@@ -13,8 +13,8 @@ Inspired by [this project on dribble](https://dribbble.com/shots/2074667-Recipe-
 
 ##Requirements
 - iOS 8.0+
-- Xcode 6.3
-- Swift 1.2
+- Xcode 7
+- Swift 2
 
 ##Installing with [CocoaPods](https://cocoapods.org)
 
@@ -49,7 +49,7 @@ tableView.addPullToRefresh(refresher, action: {
 After the action is completed and you want to hide the refresher:
 
 ```swift
-tableView.endRefresing()
+tableView.endRefreshing()
 ```
  
 You can also start refreshing programmatically:
