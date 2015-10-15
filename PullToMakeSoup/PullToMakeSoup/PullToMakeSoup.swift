@@ -1,14 +1,14 @@
 //
-//  PullToMakeSoup.swift
-//  PullToMakeSoup
-//
 //  Created by Anastasiya Gorban on 4/14/15.
 //  Copyright (c) 2015 Yalantis. All rights reserved.
 //
-
+//  Licensed under the MIT license: http://opensource.org/licenses/MIT
+//  Latest version can be found at https://github.com/Yalantis/PullToMakeSoup
+//
 
 import Foundation
 import UIKit
+import PullToRefresh
 
 public class PullToMakeSoup: PullToRefresh {
     public convenience init() {
@@ -355,8 +355,8 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
         refreshView.circle.transform = CGAffineTransformScale(CGAffineTransformIdentity, speededProgress, speededProgress);
         refreshView.circle.center = CGPointMake(refreshView.frame.size.width / 2, refreshViewHeight / 2 + refreshViewHeight - (refreshViewHeight * progress))
         
-        let progressWithOffset: (Double, Double) -> Double = {offset, progress in
-            return progress < offset ? 0 : Double((progress - offset) * 1/(1 - offset))
+        func progressWithOffset(offset: Double, _ progress: Double) -> Double {
+            return progress < offset ? 0 : (progress - offset) * 1/(1 - offset)
         }
         
         refreshView.pan.alpha = progress

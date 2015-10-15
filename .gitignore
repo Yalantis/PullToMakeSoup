@@ -25,3 +25,6 @@ pkg/*
 cpd-output.*
 DerivedData
 build.output
+
+Pods
+Podfile.lock
