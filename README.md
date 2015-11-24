@@ -38,12 +38,17 @@ Create refresher:
 let refresher = PullToMakeSoup()
 ```
 
-Add refresher to your UIScrollView subclass and provide action block:
+Add refresher to your UIScrollView subclass in 'viewDidAppear' method and provide action block:
 
 ```swift
-tableView.addPullToRefresh(refresher, action: {
-     // action to be performed (pull data from some source)
-})
+
+override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+    tableView.addPullToRefresh(refresher, action: {
+        // action to be performed (pull data from some source)
+    })
+}
+
 ```
 
 After the action is completed and you want to hide the refresher:
