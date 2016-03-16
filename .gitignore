@@ -28,3 +28,5 @@ build.output
 
 Pods
 Podfile.lock
+
+Carthage/Build

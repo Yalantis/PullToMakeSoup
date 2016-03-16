@@ -90,7 +90,7 @@
 				804EC0891C9971C00012CA27 /* PullToMakeSoup */,
 				801593F01C996F25005A0F9D /* PullToMakeSoup.h */,
 				801593F21C996F25005A0F9D /* Info.plist */,
-				804EC0A61C9985410012CA27 /* PullToRefresh.framework */,
+				804EC0B81C99A2700012CA27 /* Frameworks */,
 			);
 			path = PullToMakeSoup;
 			sourceTree = "<group>";
@@ -128,6 +128,14 @@
 				804EC0971C9971C00012CA27 /* SoupView.xib */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		804EC0B81C99A2700012CA27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				804EC0A61C9985410012CA27 /* PullToRefresh.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
