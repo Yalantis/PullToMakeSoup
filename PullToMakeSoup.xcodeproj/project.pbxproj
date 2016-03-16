@@ -21,7 +21,21 @@
 		804EC0A31C9971C00012CA27 /* potato-path-only.svg in Resources */ = {isa = PBXBuildFile; fileRef = 804EC0961C9971C00012CA27 /* potato-path-only.svg */; };
 		804EC0A41C9971C00012CA27 /* SoupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 804EC0971C9971C00012CA27 /* SoupView.xib */; };
 		804EC0A71C9985410012CA27 /* PullToRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 804EC0A61C9985410012CA27 /* PullToRefresh.framework */; };
+		804EC0B21C999AF30012CA27 /* PullToRefresh.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 804EC0A61C9985410012CA27 /* PullToRefresh.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		804EC0B11C9994390012CA27 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Carthage/Build/iOS/PullToRefresh.framework;
+			dstSubfolderSpec = 10;
+			files = (
+				804EC0B21C999AF30012CA27 /* PullToRefresh.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		801593ED1C996F25005A0F9D /* PullToMakeSoup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PullToMakeSoup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +154,7 @@
 				801593EA1C996F25005A0F9D /* Headers */,
 				801593EB1C996F25005A0F9D /* Resources */,
 				804EC0A81C99857F0012CA27 /* ShellScript */,
+				804EC0B11C9994390012CA27 /* CopyFiles */,
 			);
 			buildRules = (
 			);
