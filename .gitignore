@@ -30,3 +30,4 @@ Pods
 Podfile.lock
 
 Carthage/Build
+Carthage/Checkouts
