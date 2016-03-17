@@ -18,7 +18,7 @@ Inspired by [this project on dribble](https://dribbble.com/shots/2074667-Recipe-
 
 ####[Carthage](https://github.com/Carthage/Carthage)
 ```
-github "Yalantis/PullToMakeSoup"
+github "Yalantis/PullToMakeSoup" "master"
 ```
 
 ##Installing with [CocoaPods](https://cocoapods.org)
