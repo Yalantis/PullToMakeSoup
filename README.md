@@ -1,5 +1,5 @@
 
-##PullToMakeSoup
+##PullToMakeSoup [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 Custom animated pull-to-refresh that can be easily added to UIScrollView
 
@@ -15,6 +15,11 @@ Inspired by [this project on dribble](https://dribbble.com/shots/2074667-Recipe-
 - iOS 8.0+
 - Xcode 7
 - Swift 2
+
+####[Carthage](https://github.com/Carthage/Carthage)
+```
+github "Yalantis/PullToMakeSoup"
+```
 
 ##Installing with [CocoaPods](https://cocoapods.org)
 
