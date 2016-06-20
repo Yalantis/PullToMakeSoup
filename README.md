@@ -25,7 +25,7 @@ github "Yalantis/PullToMakeSoup" "master"
 
 ```ruby
 use_frameworks!
-pod 'PullToMakeSoup', '~> 1.0'
+pod 'PullToMakeSoup', '~> 1.2'
 ```
 
 ##Usage
