@@ -11,11 +11,11 @@ import UIKit
 import PullToRefresh
 
 public class PullToMakeSoup: PullToRefresh {
-    public convenience init() {
+    public convenience init(position : Position = Position.Top) {
         
         let refreshView =  NSBundle(forClass: self.dynamicType).loadNibNamed("SoupView", owner: nil, options: nil).first as! SoupView
         let animator =  SoupAnimator(refreshView: refreshView)
-        self.init(refreshView: refreshView, animator: animator)
+        self.init(refreshView: refreshView, animator: animator, height : refreshView.frame.size.height, position : position)
     }
 }
 
