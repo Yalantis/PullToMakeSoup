@@ -58,7 +58,7 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
     
     func animateState(state: State) {
         switch state {
-        case .Inital:
+        case .Initial:
             initalLayout()
         case .Releasing(let progress):
             releasingAnimation(progress)
