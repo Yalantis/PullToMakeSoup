@@ -184,6 +184,7 @@
 				TargetAttributes = {
 					801593EC1C996F25005A0F9D = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -363,6 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yalantis.PullToMakeSoup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -386,6 +388,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yalantis.PullToMakeSoup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

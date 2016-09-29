@@ -7,32 +7,33 @@
 //
 
 public extension PocketSVG {
+    
     class func pathFromSVGFileNamed(
-        named: String,
+        _ named: String,
         origin: CGPoint,
         mirrorX: Bool,
         mirrorY: Bool,
         scale: CGFloat) -> CGPath {
             
-        let path = PocketSVG.pathFromSVGFileNamed(named)
+        let path = PocketSVG.path(fromSVGFileNamed: named)
         
-        let bezierPath = UIBezierPath(CGPath: path.takeUnretainedValue())
+        let bezierPath = UIBezierPath(cgPath: (path?.takeUnretainedValue())!)
         
-        bezierPath.applyTransform(CGAffineTransformMakeScale(scale, scale))
+        bezierPath.apply(CGAffineTransform(scaleX: scale, y: scale))
         
         if mirrorX {
-            let mirrorOverXOrigin = CGAffineTransformMakeScale(-1.0, 1.0)
-            bezierPath.applyTransform(mirrorOverXOrigin)
+            let mirrorOverXOrigin = CGAffineTransform(scaleX: -1.0, y: 1.0)
+            bezierPath.apply(mirrorOverXOrigin)
         }
             
         if mirrorY {
-            let mirrorOverYOrigin = CGAffineTransformMakeScale(1.0, -1.0)
-            bezierPath.applyTransform(mirrorOverYOrigin)
+            let mirrorOverYOrigin = CGAffineTransform(scaleX: 1.0, y: -1.0)
+            bezierPath.apply(mirrorOverYOrigin)
         }
         
-        let translate = CGAffineTransformMakeTranslation(origin.x - bezierPath.bounds.origin.x, origin.y - bezierPath.bounds.origin.y)
-        bezierPath.applyTransform(translate)
+        let translate = CGAffineTransform(translationX: origin.x - bezierPath.bounds.origin.x, y: origin.y - bezierPath.bounds.origin.y)
+        bezierPath.apply(translate)
         
-        return bezierPath.CGPath
+        return bezierPath.cgPath
     }
 }

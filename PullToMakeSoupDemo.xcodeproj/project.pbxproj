@@ -12,7 +12,7 @@
 		4DDDB1551B0F7E1100DE9D93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DDDB1531B0F7E1100DE9D93 /* Main.storyboard */; };
 		4DDDB1571B0F7E1100DE9D93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DDDB1561B0F7E1100DE9D93 /* Images.xcassets */; };
 		4DDDB15A1B0F7E1100DE9D93 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DDDB1581B0F7E1100DE9D93 /* LaunchScreen.xib */; };
-		F1B2BDDA213B9A27653E4D0B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8847D90CA1477795D6C323 /* Pods.framework */; };
+		EA1AEEA21218E9FB13C8CF32 /* Pods_PullToMakeSoupDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93111679954DDFBE11DDB44B /* Pods_PullToMakeSoupDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,8 +29,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		10B6ACFAC53E24B386EE5377 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		3D5CE72FCDA9D83C2A53C891 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4DBC16291B11FC4E001761DA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4DC8A6AD1B11EA7900F09CCE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4DDDB14A1B0F7E1100DE9D93 /* PullToMakeSoupDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PullToMakeSoupDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,7 +38,10 @@
 		4DDDB1541B0F7E1100DE9D93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DDDB1561B0F7E1100DE9D93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4DDDB1591B0F7E1100DE9D93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		664278C89F4CA4247D1A775F /* Pods-PullToMakeSoupDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PullToMakeSoupDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PullToMakeSoupDemo/Pods-PullToMakeSoupDemo.release.xcconfig"; sourceTree = "<group>"; };
+		84A91C0F362EE439781E1516 /* Pods-PullToMakeSoupDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PullToMakeSoupDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PullToMakeSoupDemo/Pods-PullToMakeSoupDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8D8847D90CA1477795D6C323 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93111679954DDFBE11DDB44B /* Pods_PullToMakeSoupDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PullToMakeSoupDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,29 +49,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1B2BDDA213B9A27653E4D0B /* Pods.framework in Frameworks */,
+				EA1AEEA21218E9FB13C8CF32 /* Pods_PullToMakeSoupDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		12317A6CE10B0688FE9D8A64 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3D5CE72FCDA9D83C2A53C891 /* Pods.debug.xcconfig */,
-				10B6ACFAC53E24B386EE5377 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		4DDDB1411B0F7E1100DE9D93 = {
 			isa = PBXGroup;
 			children = (
 				4DDDB14C1B0F7E1100DE9D93 /* PullToMakeSoupDemo */,
 				4DDDB14B1B0F7E1100DE9D93 /* Products */,
 				ACA4BC2C6C97422361925846 /* Frameworks */,
-				12317A6CE10B0688FE9D8A64 /* Pods */,
+				9EDF817E3B35066C3840C2C9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,12 +95,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9EDF817E3B35066C3840C2C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84A91C0F362EE439781E1516 /* Pods-PullToMakeSoupDemo.debug.xcconfig */,
+				664278C89F4CA4247D1A775F /* Pods-PullToMakeSoupDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		ACA4BC2C6C97422361925846 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				4DBC16291B11FC4E001761DA /* CoreGraphics.framework */,
 				4DC8A6AD1B11EA7900F09CCE /* QuartzCore.framework */,
 				8D8847D90CA1477795D6C323 /* Pods.framework */,
+				93111679954DDFBE11DDB44B /* Pods_PullToMakeSoupDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,13 +122,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DDDB1691B0F7E1100DE9D93 /* Build configuration list for PBXNativeTarget "PullToMakeSoupDemo" */;
 			buildPhases = (
-				7622E1B398B3C4F0EFD57B10 /* Check Pods Manifest.lock */,
+				54419ACEDE2C607FAAE99645 /* [CP] Check Pods Manifest.lock */,
 				4DDDB1461B0F7E1100DE9D93 /* Sources */,
 				4DDDB1471B0F7E1100DE9D93 /* Frameworks */,
 				4DDDB1481B0F7E1100DE9D93 /* Resources */,
 				4DDDB1901B0F7EA500DE9D93 /* Embed Frameworks */,
-				A5F1DAE88EE6FBF9E4AA185B /* Embed Pods Frameworks */,
-				F27F66499502B09AD20309FE /* Copy Pods Resources */,
+				4E5E665DF1FBAD34C38FFFC0 /* [CP] Embed Pods Frameworks */,
+				BEFDBCA240450E0F489E479F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -150,6 +152,7 @@
 				TargetAttributes = {
 					4DDDB1491B0F7E1100DE9D93 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -185,49 +188,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7622E1B398B3C4F0EFD57B10 /* Check Pods Manifest.lock */ = {
+		4E5E665DF1FBAD34C38FFFC0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PullToMakeSoupDemo/Pods-PullToMakeSoupDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A5F1DAE88EE6FBF9E4AA185B /* Embed Pods Frameworks */ = {
+		54419ACEDE2C607FAAE99645 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		F27F66499502B09AD20309FE /* Copy Pods Resources */ = {
+		BEFDBCA240450E0F489E479F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PullToMakeSoupDemo/Pods-PullToMakeSoupDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -302,7 +305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -342,7 +345,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -353,25 +356,27 @@
 		};
 		4DDDB16A1B0F7E1100DE9D93 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D5CE72FCDA9D83C2A53C891 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 84A91C0F362EE439781E1516 /* Pods-PullToMakeSoupDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PullToMakeSoupDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Yalantis.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		4DDDB16B1B0F7E1100DE9D93 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10B6ACFAC53E24B386EE5377 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 664278C89F4CA4247D1A775F /* Pods-PullToMakeSoupDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PullToMakeSoupDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Yalantis.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

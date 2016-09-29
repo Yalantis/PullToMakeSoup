@@ -16,22 +16,22 @@ enum AnimationType: String {
 }
 
 enum TimingFunction {
-    case Linear, EaseIn, EaseOut, EaseInEaseOut
+    case linear, easeIn, easeOut, easeInEaseOut
 }
 
-func mediaTimingFunction(function: TimingFunction) -> CAMediaTimingFunction {
+func mediaTimingFunction(_ function: TimingFunction) -> CAMediaTimingFunction {
     switch function {
-    case .Linear: return CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-    case .EaseIn: return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
-    case .EaseOut: return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-    case .EaseInEaseOut: return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+    case .linear: return CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+    case .easeIn: return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+    case .easeOut: return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+    case .easeInEaseOut: return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
     }
 }
 
 
 extension CAKeyframeAnimation {
     class func animationWith(
-        type: AnimationType,
+        _ type: AnimationType,
         values:[Double],
         keyTimes:[Double],
         duration: Double,
@@ -39,7 +39,7 @@ extension CAKeyframeAnimation {
                         
         let animation = CAKeyframeAnimation(keyPath: type.rawValue)
         animation.values = values
-        animation.keyTimes = keyTimes
+        animation.keyTimes = keyTimes as [NSNumber]?
         animation.duration = duration
         animation.beginTime = beginTime
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
@@ -47,7 +47,7 @@ extension CAKeyframeAnimation {
         return animation
     }
     
-    class func animationPosition(path: CGPath, duration: Double, timingFunction: TimingFunction, beginTime: Double) -> CAKeyframeAnimation {
+    class func animationPosition(_ path: CGPath, duration: Double, timingFunction: TimingFunction, beginTime: Double) -> CAKeyframeAnimation {
         let animation = CAKeyframeAnimation(keyPath: "position")
         animation.path = path
         animation.duration = duration
@@ -58,8 +58,8 @@ extension CAKeyframeAnimation {
 }
 
 extension UIView {
-    func addAnimation(animation: CAKeyframeAnimation) {
-        layer.addAnimation(animation, forKey: description + animation.keyPath!)
+    func addAnimation(_ animation: CAKeyframeAnimation) {
+        layer.add(animation, forKey: description + animation.keyPath!)
         layer.speed = 0
     }
     

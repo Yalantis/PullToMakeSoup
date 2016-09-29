@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 import PullToRefresh
 
-public class PullToMakeSoup: PullToRefresh {
-    public convenience init(position : Position = Position.Top) {
-        
-        let refreshView =  NSBundle(forClass: self.dynamicType).loadNibNamed("SoupView", owner: nil, options: nil).first as! SoupView
+open class PullToMakeSoup: PullToRefresh {
+    
+    public convenience init(at position: Position = .top) {
+        let refreshView = Bundle(for: type(of: self)).loadNibNamed("SoupView", owner: nil, options: nil)!.first as! SoupView
         let animator =  SoupAnimator(refreshView: refreshView)
         self.init(refreshView: refreshView, animator: animator, height : refreshView.frame.size.height, position : position)
     }
@@ -21,50 +21,50 @@ public class PullToMakeSoup: PullToRefresh {
 
 class SoupView: UIView {
     @IBOutlet
-    private var pan: UIImageView!
+    fileprivate var pan: UIImageView!
     @IBOutlet
-    private var cover: UIImageView!
+    fileprivate var cover: UIImageView!
     @IBOutlet
-    private var potato: UIImageView!
+    fileprivate var potato: UIImageView!
     @IBOutlet
-    private var leftPea: UIImageView!
+    fileprivate var leftPea: UIImageView!
     @IBOutlet
-    private var rightPea: UIImageView!
+    fileprivate var rightPea: UIImageView!
     @IBOutlet
-    private var carrot: UIImageView!
+    fileprivate var carrot: UIImageView!
     @IBOutlet
-    private var circle: UIImageView!
+    fileprivate var circle: UIImageView!
     @IBOutlet
-    private var water: UIImageView!
+    fileprivate var water: UIImageView!
     @IBOutlet
-    private var flame: UIImageView!
+    fileprivate var flame: UIImageView!
     @IBOutlet
-    private var shadow: UIImageView!
+    fileprivate var shadow: UIImageView!
 }
 
 class SoupAnimator: NSObject, RefreshViewAnimator {
     
-    private let refreshView: SoupView
-    private let refreshViewHeight: CGFloat
+    fileprivate let refreshView: SoupView
+    fileprivate let refreshViewHeight: CGFloat
 
-    private var bubbleTimer: NSTimer?
+    fileprivate var bubbleTimer: Timer?
     
-    private let animationDuration = 0.3
+    fileprivate let animationDuration = 0.3
     
     init(refreshView: SoupView) {
         self.refreshView = refreshView
         self.refreshViewHeight = refreshView.frame.size.height
     }
     
-    func animateState(state: State) {
+    public func animate(_ state: State) {
         switch state {
-        case .Initial:
+        case .initial:
             initalLayout()
-        case .Releasing(let progress):
+        case .releasing(let progress):
             releasingAnimation(progress)
-        case .Loading:
+        case .loading:
             startLoading()
-        case .Finished:
+        case .finished:
             bubbleTimer?.invalidate()
         }
     }
@@ -75,7 +75,7 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
         let centerX = refreshView.frame.size.width / 2
         
         // Circle
-        refreshView.circle.center = CGPointMake(centerX, refreshViewHeight / 2)
+        refreshView.circle.center = CGPoint(x: centerX, y: refreshViewHeight / 2)
         
         // Carrot
         refreshView.carrot.removeAllAnimations()
@@ -83,12 +83,12 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
         refreshView.carrot.addAnimation(
             CAKeyframeAnimation.animationPosition(
                 PocketSVG.pathFromSVGFileNamed("carrot-path-only",
-                    origin: CGPointMake(centerX + 11, 10),
+                    origin: CGPoint(x: centerX + 11, y: 10),
                     mirrorX: true,
                     mirrorY: false,
                     scale: 0.5),
                 duration: animationDuration,
-                timingFunction:TimingFunction.EaseIn,
+                timingFunction:TimingFunction.easeIn,
                 beginTime:0)
         )
         
@@ -110,7 +110,7 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
         // Pan
         refreshView.pan.removeAllAnimations()
         
-        refreshView.pan.center = CGPointMake(centerX, refreshView.pan.center.y)
+        refreshView.pan.center = CGPoint(x: centerX, y: refreshView.pan.center.y)
         refreshView.pan.addAnimation(CAKeyframeAnimation.animationWith(
             AnimationType.TranslationY,
             values: [-200, 0],
@@ -118,14 +118,14 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
             duration: animationDuration,
             beginTime:0))
         refreshView.shadow.alpha = 0
-        refreshView.shadow.center = CGPointMake(centerX + 11, refreshView.shadow.center.y)
+        refreshView.shadow.center = CGPoint(x: centerX + 11, y: refreshView.shadow.center.y)
         refreshView.pan.layer.timeOffset = 0.0
         
         // Water
         
-        refreshView.water.center = CGPointMake(centerX, refreshView.water.center.y)
-        refreshView.water.layer.anchorPoint = CGPointMake(0.5, 1.0)
-        refreshView.water.transform = CGAffineTransformMakeScale(1, 0.00001);
+        refreshView.water.center = CGPoint(x: centerX, y: refreshView.water.center.y)
+        refreshView.water.layer.anchorPoint = CGPoint(x: 0.5, y: 1.0)
+        refreshView.water.transform = CGAffineTransform(scaleX: 1, y: 0.00001);
         
         // Potato
         refreshView.potato.removeAllAnimations()
@@ -133,12 +133,12 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
         refreshView.potato.addAnimation(
             CAKeyframeAnimation.animationPosition(
                 PocketSVG.pathFromSVGFileNamed("potato-path-only",
-                    origin: CGPointMake(centerX - 65, 5),
+                    origin: CGPoint(x: centerX - 65, y: 5),
                     mirrorX: true,
                     mirrorY: false,
                     scale: 1),
                 duration: animationDuration,
-                timingFunction:TimingFunction.EaseIn,
+                timingFunction:TimingFunction.easeIn,
                 beginTime:0)
         )
         
@@ -166,12 +166,12 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
         refreshView.leftPea.addAnimation(
             CAKeyframeAnimation.animationPosition(
                 PocketSVG.pathFromSVGFileNamed("pea-from-left-path-only",
-                    origin: CGPointMake(centerX - 80, 12),
+                    origin: CGPoint(x: centerX - 80, y: 12),
                     mirrorX: false,
                     mirrorY: false,
                     scale: 1),
                 duration: animationDuration,
-                timingFunction:TimingFunction.EaseIn,
+                timingFunction:TimingFunction.easeIn,
                 beginTime:0)
         )
         
@@ -192,12 +192,12 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
         refreshView.rightPea.addAnimation(
             CAKeyframeAnimation.animationPosition(
                 PocketSVG.pathFromSVGFileNamed("pea-from-right-path-only",
-                    origin: CGPointMake(centerX - 10, -13),
+                    origin: CGPoint(x: centerX - 10, y: -13),
                     mirrorX: true,
                     mirrorY: false,
                     scale: 1),
                 duration: animationDuration,
-                timingFunction:TimingFunction.EaseIn,
+                timingFunction:TimingFunction.easeIn,
                 beginTime:0)
         )
         
@@ -214,27 +214,27 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
         
         // Flame
         
-        refreshView.flame.center = CGPointMake(refreshView.frame.size.width / 2, refreshView.flame.center.y)
+        refreshView.flame.center = CGPoint(x: refreshView.frame.size.width / 2, y: refreshView.flame.center.y)
         refreshView.flame.image = nil
         refreshView.flame.stopAnimating()
         refreshView.flame.animationImages = nil
         
         // Cover
         
-        refreshView.cover.layer.anchorPoint = CGPointMake(1, 0.5)        
-        refreshView.cover.center = CGPointMake(refreshView.frame.size.width / 2 + refreshView.cover.frame.size.width/2, refreshView.cover.center.y)
+        refreshView.cover.layer.anchorPoint = CGPoint(x: 1, y: 0.5)        
+        refreshView.cover.center = CGPoint(x: refreshView.frame.size.width / 2 + refreshView.cover.frame.size.width/2, y: refreshView.cover.center.y)
         
         refreshView.cover.removeAllAnimations()
         
         refreshView.cover.addAnimation(
             CAKeyframeAnimation.animationPosition(
                 PocketSVG.pathFromSVGFileNamed("cover-path-only",
-                    origin: CGPointMake(refreshView.pan.center.x + 34, -51),
+                    origin: CGPoint(x: refreshView.pan.center.x + 34, y: -51),
                     mirrorX: true,
                     mirrorY: true,
                     scale: 0.5),
                 duration: animationDuration,
-                timingFunction:TimingFunction.EaseIn,
+                timingFunction:TimingFunction.easeIn,
                 beginTime:0)
         )
         
@@ -251,7 +251,7 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
     }
     
     func startLoading() {
-        refreshView.circle.center = CGPointMake(refreshView.frame.size.width / 2, refreshView.frame.size.height / 2)
+        refreshView.circle.center = CGPoint(x: refreshView.frame.size.width / 2, y: refreshView.frame.size.height / 2)
         refreshView.carrot.layer.timeOffset = animationDuration
         refreshView.pan.layer.timeOffset = animationDuration
         refreshView.potato.layer.timeOffset = animationDuration
@@ -260,16 +260,16 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
         refreshView.cover.layer.timeOffset = animationDuration
         
         // Water & Cover
-        refreshView.water.center = CGPointMake(refreshView.water.center.x, refreshView.pan.center.y + 22)
+        refreshView.water.center = CGPoint(x: refreshView.water.center.x, y: refreshView.pan.center.y + 22)
         refreshView.water.clipsToBounds = true
     
         
-        UIView.animateWithDuration(1, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+        UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions(), animations: {
             self.refreshView.shadow.alpha = 1
-            self.refreshView.water.transform = CGAffineTransformMakeScale(1, 1)
+            self.refreshView.water.transform = CGAffineTransform(scaleX: 1, y: 1)
             }, completion: { completed in
-                self.refreshView.cover.layer.anchorPoint = CGPointMake(0.5, 0.5)
-                self.refreshView.cover.center = CGPointMake(self.refreshView.cover.center.x - self.refreshView.cover.frame.size.width/2, self.refreshView.cover.center.y)
+                self.refreshView.cover.layer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+                self.refreshView.cover.center = CGPoint(x: self.refreshView.cover.center.x - self.refreshView.cover.frame.size.width/2, y: self.refreshView.cover.center.y)
                 let coverRotationAnimation = CAKeyframeAnimation.animationWith(
                     AnimationType.Rotation,
                     values: [0.05, 0, -0.05, 0, 0.07, -0.03, 0],
@@ -291,33 +291,32 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
                 
                 animationGroup.animations = [coverRotationAnimation, coverPositionAnimation];
                 
-                self.refreshView.cover.layer.addAnimation(animationGroup, forKey: "group")
+                self.refreshView.cover.layer.add(animationGroup, forKey: "group")
                 self.refreshView.cover.layer.speed = 1
         })
         
         // Bubbles
         
-        bubbleTimer = NSTimer.scheduledTimerWithTimeInterval(0.12, target: self, selector: "addBubble", userInfo: nil, repeats: true)
+        bubbleTimer = Timer.scheduledTimer(timeInterval: 0.12, target: self, selector: #selector(SoupAnimator.addBubble), userInfo: nil, repeats: true)
         
         // Flame
         
         var lightsImages = [UIImage]()
         for i in 1...11 {
             let imageName = NSString(format: "Flames%.4d", i)
-            let image = UIImage(named: imageName as String, inBundle: NSBundle(forClass: self.dynamicType), compatibleWithTraitCollection: nil)
+            let image = UIImage(named: imageName as String, in: Bundle(for: type(of: self)), compatibleWith: nil)
             lightsImages.append(image!)
         }
         refreshView.flame.animationImages = lightsImages
        refreshView.flame.animationDuration = 0.7
         refreshView.flame.startAnimating()
         
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW,
-            Int64(0.7 * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+        let delayTime = DispatchTime.now() + Double(Int64(0.7 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: delayTime) {
             var lightsImages = [UIImage]()
             for i in 11...68 {
                 let imageName = NSString(format: "Flames%.4d", i)
-                let image = UIImage(named: imageName as String, inBundle: NSBundle(forClass: self.dynamicType), compatibleWithTraitCollection: nil)
+                let image = UIImage(named: imageName as String, in: Bundle(for: type(of: self)), compatibleWith: nil)
                 lightsImages.append(image!)
             }
             
@@ -331,31 +330,31 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
     func addBubble() {
         let radius: CGFloat = 1
         let x = CGFloat(arc4random_uniform(UInt32(self.refreshView.water.frame.size.width)))
-        let circle = UIView(frame: CGRectMake(x, self.refreshView.water.frame.size.height, 2*radius, 2*radius))
+        let circle = UIView(frame: CGRect(x: x, y: self.refreshView.water.frame.size.height, width: 2*radius, height: 2*radius))
         circle.layer.cornerRadius = radius
         circle.layer.borderWidth = 1
         circle.layer.masksToBounds = true
-        circle.layer.borderColor = UIColor.whiteColor().CGColor
+        circle.layer.borderColor = UIColor.white.cgColor
         self.refreshView.water.addSubview(circle)
-        UIView.animateWithDuration(1.3, animations: {
+        UIView.animate(withDuration: 1.3, animations: {
             let radius:CGFloat = 4
-            circle.layer.frame = CGRectMake(x, -20, 2*radius, 2*radius)
+            circle.layer.frame = CGRect(x: x, y: -20, width: 2*radius, height: 2*radius)
             circle.layer.cornerRadius = radius
-            }) { _ in
+            }, completion: { _ in
                 circle.removeFromSuperview()
-        }
+        }) 
     }
     
-    func releasingAnimation(progress: CGFloat) {
+    func releasingAnimation(_ progress: CGFloat) {
         let speed: CGFloat = 1.5
         
         let speededProgress: CGFloat = progress * speed > 1 ? 1 : progress * speed
         
         refreshView.circle.alpha = progress
-        refreshView.circle.transform = CGAffineTransformScale(CGAffineTransformIdentity, speededProgress, speededProgress);
-        refreshView.circle.center = CGPointMake(refreshView.frame.size.width / 2, refreshViewHeight / 2 + refreshViewHeight - (refreshViewHeight * progress))
+        refreshView.circle.transform = CGAffineTransform.identity.scaledBy(x: speededProgress, y: speededProgress);
+        refreshView.circle.center = CGPoint(x: refreshView.frame.size.width / 2, y: refreshViewHeight / 2 + refreshViewHeight - (refreshViewHeight * progress))
         
-        func progressWithOffset(offset: Double, _ progress: Double) -> Double {
+        func progressWithOffset(_ offset: Double, _ progress: Double) -> Double {
             return progress < offset ? 0 : (progress - offset) * 1/(1 - offset)
         }
         
