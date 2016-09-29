@@ -1,5 +1,8 @@
-platform :ios, '8.0'
+platform :ios, '9.0'
 use_frameworks!
 
-xcodeproj 'PullToMakeSoupDemo.xcodeproj'
-pod "PullToMakeSoup", :path => "./"
+target 'PullToMakeSoupDemo' do
+	project 'PullToMakeSoupDemo.xcodeproj'
+
+	pod "PullToMakeSoup", :path => "./"
+end
