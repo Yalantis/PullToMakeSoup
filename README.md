@@ -13,19 +13,19 @@ Inspired by [this project on dribble](https://dribbble.com/shots/2074667-Recipe-
 
 ##Requirements
 - iOS 8.0+
-- Xcode 7
-- Swift 2
+- Xcode 8
+- Swift 3
 
 ####[Carthage](https://github.com/Carthage/Carthage)
 ```
-github "Yalantis/PullToMakeSoup" "master"
+github "Yalantis/PullToMakeSoup" ~> 2.0
 ```
 
 ##Installing with [CocoaPods](https://cocoapods.org)
 
 ```ruby
 use_frameworks!
-pod 'PullToMakeSoup', '~> 1.2'
+pod 'PullToMakeSoup', '~> 2.0'
 ```
 
 ##Usage
@@ -49,9 +49,9 @@ Add refresher to your UIScrollView subclass in 'viewDidAppear' method and provid
 
 override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
-    tableView.addPullToRefresh(refresher, action: {
+    tableView.addPullToRefresh(refresher) {
         // action to be performed (pull data from some source)
-    })
+    }
 }
 
 ```
