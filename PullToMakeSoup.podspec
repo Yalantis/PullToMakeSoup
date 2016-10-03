@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "8.0"
 
-  s.source       = { :git => "https://github.com/Yalantis/PullToMakeSoup.git", :tag => "1.2" }
+  s.source       = { :git => "https://github.com/Yalantis/PullToMakeSoup.git", :tag => s.version }
   s.source_files = "PullToMakeSoup/**/*.{h,m,swift}"
   s.resources    = 'PullToMakeSoup/**/*.{svg,png,xib,xcassets}'
   s.module_name  = "PullToMakeSoup"
