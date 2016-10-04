@@ -15,6 +15,7 @@ Inspired by [this project on dribble](https://dribbble.com/shots/2074667-Recipe-
 - iOS 8.0+
 - Xcode 8
 - Swift 3
+- Portrait orientation
 
 ####[Carthage](https://github.com/Carthage/Carthage)
 ```
