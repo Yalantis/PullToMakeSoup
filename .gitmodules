@@ -1,0 +1,3 @@
+[submodule "Carthage/Checkouts/PullToRefresh"]
+	path = Carthage/Checkouts/PullToRefresh
+	url = https://github.com/Yalantis/PullToRefresh.git
