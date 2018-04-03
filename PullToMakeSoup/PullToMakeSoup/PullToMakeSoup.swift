@@ -287,7 +287,7 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
                 
                 let animationGroup = CAAnimationGroup()
                 animationGroup.duration = 1;
-                animationGroup.repeatCount = FLT_MAX;
+                animationGroup.repeatCount = Float.greatestFiniteMagnitude;
                 
                 animationGroup.animations = [coverRotationAnimation, coverPositionAnimation];
                 
@@ -327,7 +327,7 @@ class SoupAnimator: NSObject, RefreshViewAnimator {
         }
     }
     
-    func addBubble() {
+    @objc func addBubble() {
         let radius: CGFloat = 1
         let x = CGFloat(arc4random_uniform(UInt32(self.refreshView.water.frame.size.width)))
         let circle = UIView(frame: CGRect(x: x, y: self.refreshView.water.frame.size.height, width: 2*radius, height: 2*radius))

@@ -1,5 +1,5 @@
 
-##PullToMakeSoup [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+## PullToMakeSoup [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 Custom animated pull-to-refresh that can be easily added to UIScrollView
 
@@ -11,25 +11,25 @@ Inspired by [this project on dribble](https://dribbble.com/shots/2074667-Recipe-
 
 <img src="https://raw.githubusercontent.com/Yalantis/PullToMakeSoup/master/PullToMakeSoupDemo/Resouces/recipe-finder.gif" />
 
-##Requirements
+## Requirements
 - iOS 8.0+
 - Xcode 8
 - Swift 3
 - Portrait orientation
 
-####[Carthage](https://github.com/Carthage/Carthage)
+#### [Carthage](https://github.com/Carthage/Carthage)
 ```
 github "Yalantis/PullToMakeSoup" ~> 2.0
 ```
 
-##Installing with [CocoaPods](https://cocoapods.org)
+## Installing with [CocoaPods](https://cocoapods.org)
 
 ```ruby
 use_frameworks!
 pod 'PullToMakeSoup', '~> 2.0'
 ```
 
-##Usage
+## Usage
 
 At first, import PullToMakeSoup framework:
 
